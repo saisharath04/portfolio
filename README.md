@@ -7,8 +7,8 @@ A personal portfolio website built with React, TypeScript, and Vite.
 - Vite
 - Web3Forms (contact form)
 
-## 🚀 Live Demo
-[your-vercel-url.vercel.app](https://saisharath-portfolio.vercel.app/)
+## 🚀 Portfolio website
+[Portfolio](https://saisharath-portfolio.vercel.app/)
 
 ## 📦 Running Locally
 npm install
