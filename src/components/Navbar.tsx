@@ -20,7 +20,6 @@ export default function Navbar({ activeSection }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleScroll = (id: string) => {
-    setIsOpen(false);
     const element = document.getElementById(id);
     if (element) {
       // Offset scroll for navbar height (approx 64px / 4rem)
@@ -28,10 +27,18 @@ export default function Navbar({ activeSection }: NavbarProps) {
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - navbarHeight;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+      setIsOpen(false);
+
+      // Defer scroll slightly to allow the mobile menu close to initiate
+      // and prevent mobile click event handlers from cancelling the smooth scroll.
+      setTimeout(() => {
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }, 100);
+    } else {
+      setIsOpen(false);
     }
   };
 
