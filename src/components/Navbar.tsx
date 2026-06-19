@@ -55,7 +55,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
 
           {/* Desktop Nav Links */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-1 relative">
+            <div className="flex items-center space-x-1.5 relative">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id;
                 return (
@@ -77,6 +77,15 @@ export default function Navbar({ activeSection }: NavbarProps) {
                   </button>
                 );
               })}
+              <a
+                href="/SaiSharath_Resume.pdf"
+                download="SaiSharath_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 px-4.5 py-2 text-xs font-bold border border-cyan-500/30 hover:border-cyan-400 text-cyan-400 hover:text-white bg-cyan-500/5 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 flex items-center gap-1.5 cursor-pointer"
+              >
+                Resume
+              </a>
             </div>
           </div>
 
@@ -119,6 +128,16 @@ export default function Navbar({ activeSection }: NavbarProps) {
                   </button>
                 );
               })}
+              <a
+                href="/SaiSharath_Resume.pdf"
+                download="SaiSharath_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center mt-4 mx-2 px-4 py-2.5 text-sm font-bold border border-cyan-500/30 hover:border-cyan-400 text-cyan-400 hover:text-white bg-cyan-500/5 hover:bg-cyan-500/10 rounded-lg transition-all cursor-pointer"
+                onClick={() => setIsOpen(false)}
+              >
+                Download Resume
+              </a>
             </div>
           </motion.div>
         )}

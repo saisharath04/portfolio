@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, MessageSquare } from 'lucide-react';
+import { ArrowRight, MessageSquare, Download } from 'lucide-react';
 import profileImg from '../assets/profile.jpg';
 
 const words = ["React Developer", "TypeScript Enthusiast", "UI Performance Expert"];
@@ -140,6 +140,17 @@ export default function Hero() {
                 Contact Me
                 <MessageSquare className="ml-2 h-4.5 w-4.5" />
               </button>
+
+              <a
+                href="/SaiSharath_Resume.pdf"
+                download="SaiSharath_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 border border-slate-800 hover:border-emerald-450 text-sm font-bold rounded-xl text-slate-300 hover:text-white bg-slate-900/60 hover:bg-slate-900 transition-all cursor-pointer hover:scale-105"
+              >
+                Download Resume
+                <Download className="ml-2 h-4.5 w-4.5" />
+              </a>
             </motion.div>
           </div>
 
